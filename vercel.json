@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "vercel-handler.js", "use": "@now/node-server" },
+    { "src": "reverseproxy.go", "use": "@now/go" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/vercel-handler.js" }
+  ]
+}
