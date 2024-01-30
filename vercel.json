@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     { "src": "vercel-handler.js", "use": "@vercel/node" },
-    { "src": "reverseproxy.go", "use": "@now/go" }
+    { "src": "reverseproxy.go", "use": "@vercel/go" }
   ],
   "routes": [
     { "src": "/(.*)", "dest": "/vercel-handler.js" }
